@@ -1,6 +1,6 @@
-# Phaser Editor 2D Timer Scripts (library)
+# Phaser Editor 2D Random Scripts (library)
 
-This project contains Phaser Editor 2D scripts for using a timer.
+This project contains Phaser Editor 2D scripts for configuring random actions.
 
 These script nodes are very basic and may fit on any Phaser Editor 2D project.
 
@@ -16,7 +16,7 @@ To install this in your game you have to install dependencies too:
 
 ```
 npm install @phasereditor2d/scripts-core
-npm install @phasereditor2d/scripts-timer
+npm install @phasereditor2d/scripts-random
 ```
 
 Also, you should add this package to the `phasereditor2d.config.json` file in your project, in the `scripts` section:
@@ -25,7 +25,7 @@ Also, you should add this package to the `phasereditor2d.config.json` file in yo
 {
     "scripts": [
         "@phasereditor2d/scripts-core",
-        "@phasereditor2d/scripts-timer"
+        "@phasereditor2d/scripts-random"
     ]
 }
 ```
@@ -33,45 +33,49 @@ Also, you should add this package to the `phasereditor2d.config.json` file in yo
 ## Installing (vanilla JavaScript)
 
 * Get the files in the [browser](./browser/) folder and copy them into your JavaScript project. It includes Phaser Editor 2D files, JavaScript files, and TypeScript type definitions.
-* Add a `script` tag to the `index.html` file to load the `lib/phasereditor2d_scripts_timer.js` file.
+* Add a `script` tag to the `index.html` file to load the `lib/phasereditor2d_scripts_random.js` file.
 
 ## Summary
 
-This library provides a few actions for implementing timers in your game. 
+This library provides a few actions for using random values in your game. You can configure the domain of the random values by using the configuration components.
 
 As a reminder, an action is executed by an event script or another action.
 
 The actions:
 
-* **Delay Action** - Delays, then executes the children's scripts.
-* **Delay Random Action** - Delays a random time, then executes the children's
-* **Emit Tick Action** - Emits a tick at every given delay.
-* **Emit Random Tick Action** - Emits a tick always at a random delay.
+* **Set Random X Action** - Set a random value to the object's X.
+* **Set Random Y Action** - Set a random value to the object's X.
 
-## Delay Action
+The configuration components:
 
-*Class: DelayActionScript*
+* **Random Between Config** - To select an integer random value between two numbers.
+* **Random Multiple Config** - To select an integer random multiple between two numbers.
+* **Random In Array Config** - To pick a random value in an array of options.
 
-This action delays a given **Delay** time and then executes the children's scripts.
+## Set Random X Action
 
-## Delay Random Action
+*Class: SetRandomXActionScript*
 
-*Class: DelayRandomActionScript*
+This action sets a random X value to the game object. It requires that you add to this node one of the random configuration components.
 
-This action delays a random time and then executes the children's scripts.
+It allows 
 
-The delay time is a random number between the given **Min** and **Max** parameters.
+## Set Random Y Action
 
-## Emit Tick Action Script
+*Class: SetRandomYActionScript*
 
-*Class: EmitTickActionScript*
+This action sets a random Y value to the game object. It requires that you add to this node one of the random configuration components.
 
-This action emits a tick at a fixed rate, within the given **Delay**. At every tick, it executes the children's scripts.
+## Random Between Config
 
-## Emit Random Tick Action
+This user component contains the configuration for generating a random integer values between the given parameters **Min** and **Max**.
 
-*Class: EmitRandomTickActionScript*
+## Random Multiple Config
 
-This action emits a tick at a random rate. At every tick, it executes the children's scripts.
+This user component contains the configuration for generating random integer values between the given parameters **Min** and **Max**, but it is also a multiple of the **Multiple** parameter.
 
-The delay time is a random number between the given **Min** and **Max** parameters.
+Eg., with a multiple of 10, the possible values between 10 and 30 are 10, 20, and 30.
+
+## Random In Array Config
+
+This user component contains the parameters for picking a random number from an array of options. You can write the array in the **Options** parameters, following a JSON array format. Like this: `[10, 34, 2, 89, 20]`.
