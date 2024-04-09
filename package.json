@@ -1,12 +1,12 @@
 {
 	"name": "@phaserjs/editor-scripts-random",
 	"version": "2.0.0",
-	"description": "Audio scripts for Phaser Editor 2D.",
+	"description": "Audio scripts for Phaser Editor v4.",
 	"main": "out/index.js",
 	"types": "types/index.d.ts",
 	"repository": {
 		"type": "git",
-		"url": "https://github.com/PhaserEditor2D/phasereditor2d-scripts-random"
+		"url": "https://github.com/phaserjs/editor-scripts-random"
 	},
 	"scripts": {
 		"test": "echo \"Error: no test specified\" && exit 1",
