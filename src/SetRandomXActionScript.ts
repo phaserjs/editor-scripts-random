@@ -3,10 +3,10 @@
 
 /* START OF COMPILED CODE */
 
-import { ScriptNode } from "@phasereditor2d/scripts-core";
+import { ScriptNode } from "@phaserjs/editor-scripts-core";
 import Phaser from "phaser";
 /* START-USER-IMPORTS */
-import { AssignOpComp } from "@phasereditor2d/scripts-core";
+import { AssignOpComp } from "@phaserjs/editor-scripts-core";
 import GetRandom from "./GetRandom";
 /* END-USER-IMPORTS */
 

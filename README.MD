@@ -1,8 +1,8 @@
-# Phaser Editor 2D Random Scripts (library)
+# Phaser Editor v4 Random Scripts (library)
 
-This project contains Phaser Editor 2D scripts for configuring random actions.
+This project contains Phaser Editor scripts for configuring random actions.
 
-These script nodes are very basic and may fit on any Phaser Editor 2D project.
+These script nodes are very basic and may fit on any Phaser Editor project.
 
 The scripts are coded in TypeScript with ES modules.
 
@@ -10,13 +10,13 @@ The scripts are coded in TypeScript with ES modules.
 
 This package depends on the following packages:
 
-- `@phasereditor2d/scripts-core`
+- `@phaserjs/editor-scripts-core`
 
 To install this in your game you have to install dependencies too:
 
 ```
-npm install @phasereditor2d/scripts-core
-npm install @phasereditor2d/scripts-random
+npm install @phaserjs/editor-scripts-core
+npm install @phaserjs/editor-scripts-random
 ```
 
 Also, you should add this package to the `phasereditor2d.config.json` file in your project, in the `scripts` section:
@@ -24,16 +24,16 @@ Also, you should add this package to the `phasereditor2d.config.json` file in yo
 ```json
 {
     "scripts": [
-        "@phasereditor2d/scripts-core",
-        "@phasereditor2d/scripts-random"
+        "@phaserjs/editor-scripts-core",
+        "@phaserjs/editor-scripts-random"
     ]
 }
 ```
 
 ## Installing (vanilla JavaScript)
 
-* Get the files in the [browser](./browser/) folder and copy them into your JavaScript project. It includes Phaser Editor 2D files, JavaScript files, and TypeScript type definitions.
-* Add a `script` tag to the `index.html` file to load the `lib/phasereditor2d_scripts_random.js` file.
+* Get the files in the [browser](./browser/) folder and copy them into your JavaScript project. It includes Phaser Editor files, JavaScript files, and TypeScript type definitions.
+* Add a `script` tag to the `index.html` file to load the `lib/phaserjs_editor_scripts_random.js` file.
 
 ## Summary
 
@@ -68,11 +68,11 @@ This action sets a random Y value to the game object. It requires that you add t
 
 ## Random Between Config
 
-This user component contains the configuration for generating a random integer values between the given parameters **Min** and **Max**.
+This user component contains the configuration for generating random integer values between the given parameters **Min** and **Max**.
 
 ## Random Multiple Config
 
-This user component contains the configuration for generating random integer values between the given parameters **Min** and **Max**, but it is also a multiple of the **Multiple** parameter.
+This user component contains the configuration for generating random integer values between the given parameters **Min** and **Max**, but it is also a multiple of the **Multiple** parameters.
 
 Eg., with a multiple of 10, the possible values between 10 and 30 are 10, 20, and 30.
 
